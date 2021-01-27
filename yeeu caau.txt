@@ -1,0 +1,15 @@
+Data Source=DESKTOP-5RKP31B\Rio;Initial Catalog=QuanLyTienLuong;Integrated Security=True
+
+nêu các chức năng nghiệp vụ
+thiết kế cơ sở dữ liệu
+giao diện giải thích  giao diện
+
+quản lý lương
+ql phụ cấp
+ql bacluong 
+ql ngachluong
+ql các khoản giảm trừ
+ql hệ số lương
+
+
+

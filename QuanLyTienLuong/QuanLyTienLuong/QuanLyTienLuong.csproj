@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29F25936-A787-4592-954A-0D4C6EEA119B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyTienLuong</RootNamespace>
+    <AssemblyName>QuanLyTienLuong</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm-login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-login.Designer.cs">
+      <DependentUpon>frm-login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NHANSU_baocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NHANSU_baocao.Designer.cs">
+      <DependentUpon>frm_NHANSU_baocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-TIM-NHANSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-TIM-NHANSU.Designer.cs">
+      <DependentUpon>frm-TIM-NHANSU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MDI_nhansu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MDI_nhansu.Designer.cs">
+      <DependentUpon>frm_MDI_nhansu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaikhoan.Designer.cs">
+      <DependentUpon>frmTaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_LUONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LUONG.Designer.cs">
+      <DependentUpon>frm_LUONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qlNHANSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qlNHANSU.Designer.cs">
+      <DependentUpon>qlNHANSU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTienLuongDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyTienLuongDataSet61.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="timluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timluong.Designer.cs">
+      <DependentUpon>timluong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm-login.resx">
+      <DependentUpon>frm-login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-TIM-NHANSU.resx">
+      <DependentUpon>frm-TIM-NHANSU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MDI_nhansu.resx">
+      <DependentUpon>frm_MDI_nhansu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaikhoan.resx">
+      <DependentUpon>frmTaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NHANSU_baocao.resx">
+      <DependentUpon>frm_NHANSU_baocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frm_LUONG.resx">
+      <DependentUpon>frm_LUONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qlNHANSU.resx">
+      <DependentUpon>qlNHANSU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="timluong.resx">
+      <DependentUpon>timluong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyTienLuongDataSet.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet.xss">
+      <DependentUpon>QuanLyTienLuongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet1.xss">
+      <DependentUpon>QuanLyTienLuongDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet2.xss">
+      <DependentUpon>QuanLyTienLuongDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet3.xss">
+      <DependentUpon>QuanLyTienLuongDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet4.xss">
+      <DependentUpon>QuanLyTienLuongDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet51.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet51.xss">
+      <DependentUpon>QuanLyTienLuongDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet61.xsc">
+      <DependentUpon>QuanLyTienLuongDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyTienLuongDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyTienLuongDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyTienLuongDataSet61.xss">
+      <DependentUpon>QuanLyTienLuongDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resolving_problems-resolving-problems-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sreach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-world-money-icon-png-image_3788219.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clea1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
