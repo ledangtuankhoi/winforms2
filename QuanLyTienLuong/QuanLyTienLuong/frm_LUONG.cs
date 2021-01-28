@@ -439,8 +439,9 @@ namespace QuanLyTienLuong
         {
             showSubMenu(panelACC);
             showSubMenu(panelACC);
+
             this.Close();
-            frmTaikhoan frm = new frmTaikhoan();
+            frm_taikhoan_luong frm = new frm_taikhoan_luong();
             frm.ShowDialog();
 
         }

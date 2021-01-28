@@ -305,7 +305,7 @@ namespace QuanLyTienLuong
 
         private void btnxoa_Click_1(object sender, EventArgs e)
         {
-            conn.Open();
+                conn.Open();
 
             try
             {
