@@ -36,21 +36,21 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLuong = new System.Windows.Forms.Button();
-            this.btnNhanSu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.piclogin = new System.Windows.Forms.PictureBox();
             this.txtlogin = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btntaikhoab = new System.Windows.Forms.Button();
+            this.btnLuong = new System.Windows.Forms.Button();
+            this.btnNhanSu = new System.Windows.Forms.Button();
+            this.piclogin = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbLogin.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piclogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTaiKhoan
@@ -137,18 +137,9 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyTienLuong.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 139);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 241);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btntaikhoab);
             this.panel2.Controls.Add(this.btnLuong);
             this.panel2.Controls.Add(this.btnNhanSu);
             this.panel2.Controls.Add(this.panel3);
@@ -156,6 +147,56 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(234, 566);
             this.panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.piclogin);
+            this.panel3.Controls.Add(this.txtlogin);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(234, 180);
+            this.panel3.TabIndex = 1;
+            // 
+            // txtlogin
+            // 
+            this.txtlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogin.Location = new System.Drawing.Point(3, 135);
+            this.txtlogin.Multiline = true;
+            this.txtlogin.Name = "txtlogin";
+            this.txtlogin.Size = new System.Drawing.Size(228, 39);
+            this.txtlogin.TabIndex = 0;
+            this.txtlogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button1
+            // 
+            this.button1.CausesValidation = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::QuanLyTienLuong.Properties.Resources.asdf;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(798, 497);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 57);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "thoát";
+            this.button1.UseCompatibleTextRendering = true;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btntaikhoab
+            // 
+            this.btntaikhoab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btntaikhoab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntaikhoab.Image = global::QuanLyTienLuong.Properties.Resources.admin_settings_male;
+            this.btntaikhoab.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntaikhoab.Location = new System.Drawing.Point(0, 346);
+            this.btntaikhoab.Name = "btntaikhoab";
+            this.btntaikhoab.Size = new System.Drawing.Size(234, 83);
+            this.btntaikhoab.TabIndex = 5;
+            this.btntaikhoab.Text = "quản lý tai khoan";
+            this.btntaikhoab.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btntaikhoab.UseVisualStyleBackColor = true;
+            this.btntaikhoab.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnLuong
             // 
@@ -187,16 +228,6 @@
             this.btnNhanSu.UseVisualStyleBackColor = true;
             this.btnNhanSu.Click += new System.EventHandler(this.btnNhanSu_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.piclogin);
-            this.panel3.Controls.Add(this.txtlogin);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(234, 180);
-            this.panel3.TabIndex = 1;
-            // 
             // piclogin
             // 
             this.piclogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -210,45 +241,21 @@
             this.piclogin.TabStop = false;
             this.piclogin.Click += new System.EventHandler(this.piclogin_Click);
             // 
-            // txtlogin
+            // pictureBox1
             // 
-            this.txtlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlogin.Location = new System.Drawing.Point(3, 135);
-            this.txtlogin.Multiline = true;
-            this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(228, 39);
-            this.txtlogin.TabIndex = 0;
-            this.txtlogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button1
-            // 
-            this.button1.CausesValidation = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::QuanLyTienLuong.Properties.Resources.asdf;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(798, 497);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 57);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "thoát";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(779, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 31);
-            this.textBox1.TabIndex = 23;
+            this.pictureBox1.Image = global::QuanLyTienLuong.Properties.Resources.login;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 139);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 566);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -261,13 +268,12 @@
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piclogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -289,7 +295,7 @@
         private System.Windows.Forms.TextBox txtlogin;
         private System.Windows.Forms.Button btnLuong;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btntaikhoab;
     }
 }
 

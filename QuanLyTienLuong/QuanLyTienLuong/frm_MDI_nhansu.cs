@@ -13,6 +13,9 @@ namespace QuanLyTienLuong
     public partial class frm_MDI_nhansu : Form
     {
         private int childFormNumber = 0;
+        public string setmaquyen;
+        public string getmaquyen;
+
 
         public frm_MDI_nhansu()
         {
@@ -98,8 +101,45 @@ namespace QuanLyTienLuong
 
         private void frmMDI_nhansu_Load(object sender, EventArgs e)
         {
+            
+
             frmqlNHANSU frm = new frmqlNHANSU();
             frm.MdiParent = this;
+            getmaquyen = setmaquyen;
+
+            if (getmaquyen == "1")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\people1.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = false;
+                //btntaikhoab.Enabled = false;
+
+
+
+            }
+            if (getmaquyen == "2")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\Untitled-1.png");
+
+                //btnLuong.Enabled = false;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = false;
+
+
+            }
+            if (getmaquyen == "0")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\admin-settings-male.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = true;
+
+            }
+
+
+            
             frm.Show();
         }
 
@@ -131,9 +171,11 @@ namespace QuanLyTienLuong
 
         private void btnACCOUNT_Click(object sender, EventArgs e)
         {
-            frmTaikhoan FRM = new frmTaikhoan();
+            frm_taikhoan_NHANSU FRM = new frm_taikhoan_NHANSU();
             FRM.MdiParent = this;
             FRM.Show();
         }
+
+        
     }
 }

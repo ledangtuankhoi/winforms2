@@ -33,6 +33,7 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.chuyểnTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mENUCHINHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +92,6 @@
             this.bBacLuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.luongNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.luongNhanVienTableAdapter = new QuanLyTienLuong.QuanLyTienLuongDataSet1TableAdapters.LuongNhanVienTableAdapter();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,6 +128,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(859, 323);
             this.panel3.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label8.Location = new System.Drawing.Point(498, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(215, 24);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "quản lý thông tin lương";
             // 
             // btnThoat
             // 
@@ -679,10 +690,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -702,17 +713,6 @@
             // luongNhanVienTableAdapter
             // 
             this.luongNhanVienTableAdapter.ClearBeforeFill = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label8.Location = new System.Drawing.Point(498, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(215, 24);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "quản lý thông tin lương";
             // 
             // frmqlLUONG
             // 

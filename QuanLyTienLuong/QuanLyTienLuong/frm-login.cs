@@ -76,6 +76,7 @@ namespace QuanLyTienLuong
 
         }
 
+        string maquyen;
         private void btnuser_Click(object sender, EventArgs e)
         {
 
@@ -119,16 +120,19 @@ namespace QuanLyTienLuong
                 if (data.Read() == true)
 	                {
                         txtlogin.Text = data[0].ToString();
-                        string maquyen = data[3].ToString();
-		                 
+                        maquyen = data[3].ToString();
+
+                        //this.txtTaiKhoan.ResetText();
+                        this.txtMatKhau.ResetText();
                         if (maquyen == "1")
                         {
                             piclogin.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\people1.png");
 
                             btnLuong.Enabled = true;
                             btnNhanSu.Enabled = false;
-                            this.txtTaiKhoan.ResetText();
-                            this.txtMatKhau.ResetText();
+                            btntaikhoab.Enabled = false;
+                           
+                            
                             
                         }
                         if (maquyen == "2")
@@ -137,8 +141,9 @@ namespace QuanLyTienLuong
 
                             btnLuong.Enabled = false;
                             btnNhanSu.Enabled = true;
-                            this.txtTaiKhoan.ResetText();
-                            this.txtMatKhau.ResetText();
+                            btntaikhoab.Enabled = false;
+
+                            
                         }
                         if (maquyen == "0")
                         {
@@ -146,8 +151,8 @@ namespace QuanLyTienLuong
 
                             btnLuong.Enabled = true;
                             btnNhanSu.Enabled = true;
-                            this.txtTaiKhoan.ResetText();
-                            this.txtMatKhau.ResetText();
+                            btntaikhoab.Enabled = true;
+                           
                         }
 
 
@@ -165,12 +170,11 @@ namespace QuanLyTienLuong
 
             conn.Close();
 
-
-
-
-
-
         }
+
+
+      
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -200,6 +204,7 @@ namespace QuanLyTienLuong
             //textBox1.Text = dsuser.Tables["user"].Rows.Count.ToString();
             btnLuong.Enabled = false;
             btnNhanSu.Enabled = false;
+            btntaikhoab.Enabled = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -210,6 +215,7 @@ namespace QuanLyTienLuong
         private void btnNhanSu_Click(object sender, EventArgs e)
         {
             frm_MDI_nhansu frmnv = new frm_MDI_nhansu();
+            frmnv.setmaquyen = maquyen;
             frmnv.ShowDialog();
             this.Hide();
         }
@@ -217,9 +223,15 @@ namespace QuanLyTienLuong
         private void btnLuong_Click(object sender, EventArgs e)
         {
             frmqlLUONG frmluong = new frmqlLUONG();
+            frmluong.setmaquyen = maquyen;
             frmluong.ShowDialog();
             //fluong.ShowDialog();
             //this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

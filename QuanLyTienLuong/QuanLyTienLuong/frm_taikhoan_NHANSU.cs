@@ -9,18 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace QuanLyTienLuong
 {
-    public partial class frmTaikhoan : Form
+    public partial class frm_taikhoan_NHANSU : Form
     {
-       
 
         string strConnectionstring = @"Data Source=DESKTOP-5RKP31B;Initial Catalog=QuanLyTienLuong;Integrated Security=True";
         SqlConnection conn = null;
         SqlDataAdapter daTAIKHAON = null;
         DataTable dtTAIKHOAN = null;
         bool Them;
+
         void LoadData()
         {
             try
@@ -39,92 +38,15 @@ namespace QuanLyTienLuong
                 MessageBox.Show("khong lay dc du lieu trong table user1. loi roi");
 
             }
+
             txtcoutacc.Text = dtTAIKHOAN.Rows.Count.ToString();
 
 
         }
 
-        public frmTaikhoan()
+        public frm_taikhoan_NHANSU()
         {
             InitializeComponent();
-        }
-
-        private void hideSubMenu()
-        {
-            panelACC.Visible = false;
-
-        }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
-
-        private void btnMedia_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelACC);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbQLL_XemTruoc_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmTaikhoan_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyTienLuongDataSet.user1' table. You can move, or remove it, as needed.
-            this.user1TableAdapter.Fill(this.quanLyTienLuongDataSet.user1);
-
-            txttentaikhoan.Focus();
-            
-            LoadData();
-            
-            this.btnluu.Enabled = false;
-            this.btnhuybo.Enabled = false;
-            
-            hideSubMenu();
-            
-            this.txttenDANGNHAP.Focus();
-
-
-
-
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-5RKP31B;Initial Catalog=QuanLyTienLuong;Integrated Security=True");
-            conn.Open();
-            SqlCommand sc = new SqlCommand("select * from user1 ", conn);
-            SqlDataReader reader;
-
-            reader = sc.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("maquyen", typeof(string));
-            dt.Load(reader);
-
-            comboBox1.ValueMember = "maquyen";
-            comboBox1.DisplayMember = "maquyen";
-            comboBox1.DataSource = dt;
-
-            conn.Close();
-        }
-
-        private void txtmanhanvien_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void btnACCOUNT_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelACC);
-
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -171,7 +93,7 @@ namespace QuanLyTienLuong
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = conn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = System.String.Concat("INSERT INTO user1 values(" + "'" + this.txttentaikhoan.Text.ToString() + "','" + this.txttenDANGNHAP.Text.ToString() + "','" + this.txtmatkhau.Text.ToString() + "','" + this.txtmaquyen.Text.ToString()  + "')");
+                    cmd.CommandText = System.String.Concat("INSERT INTO user1 values(" + "'" + this.txttentaikhoan.Text.ToString() + "','" + this.txttenDANGNHAP.Text.ToString() + "','" + this.txtmatkhau.Text.ToString() + "','" + this.txtmaquyen.Text.ToString() + "')");
                     cmd.CommandType = CommandType.Text;
 
                     cmd.ExecuteNonQuery();
@@ -185,8 +107,8 @@ namespace QuanLyTienLuong
             }
             if (!Them)
             {
-                SqlCommand cmd = new SqlCommand(); 
-                cmd.Connection = conn; 
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 int r = dgvtaikhoan.CurrentCell.RowIndex;
                 string strTAIKHOAN = dgvtaikhoan.Rows[r].Cells[0].Value.ToString();
@@ -210,11 +132,11 @@ namespace QuanLyTienLuong
             this.btnsua.Enabled = true;
             this.btnlammoi.Enabled = true;
             this.btnthem.Enabled = true;
-
         }
 
         private void btnsua_Click(object sender, EventArgs e)
         {
+
             Them = false;
             this.btnluu.Enabled = true;
 
@@ -245,8 +167,8 @@ namespace QuanLyTienLuong
 
             try
             {
-                SqlCommand cmd = new SqlCommand(); 
-                cmd.Connection = conn; 
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 int r = dgvtaikhoan.CurrentCell.RowIndex;
                 string strTAIKHOAN = dgvtaikhoan.Rows[r].Cells[0].Value.ToString();
@@ -270,7 +192,7 @@ namespace QuanLyTienLuong
             conn.Close();
         }
 
-        private void btnlammoi_Click_1(object sender, EventArgs e)
+        private void btnlammoi_Click(object sender, EventArgs e)
         {
             LoadData();
 
@@ -282,60 +204,43 @@ namespace QuanLyTienLuong
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult traloi;
-            traloi = MessageBox.Show("Chắc không?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK)
-            {
-                //Application.Exit();
-                this.Close();
-            }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnACCOUNT_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
             this.Close();
-            frmbaocao frm = new frmbaocao();
-            frm.ShowDialog();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void frm_taikhoan_NHANSU_Load(object sender, EventArgs e)
         {
-            this.Close();
-            frmtimluong frm = new frmtimluong();
-            frm.ShowDialog();
+            // TODO: This line of code loads data into the 'quanLyTienLuongDataSet7.user1' table. You can move, or remove it, as needed.
+            this.user1TableAdapter.Fill(this.quanLyTienLuongDataSet7.user1);
+
+            // TODO: This line of code loads data into the 'quanLyTienLuongDataSet.user1' table. You can move, or remove it, as needed.
+            //this.user1TableAdapter.Fill(this.quanLyTienLuongDataSet.user1);
+
+            txttentaikhoan.Focus();
+
+            LoadData();
+
+            this.btnluu.Enabled = false;
+            this.btnhuybo.Enabled = false;
+
+            
+
+            this.txttenDANGNHAP.Focus();
+
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-5RKP31B;Initial Catalog=QuanLyTienLuong;Integrated Security=True");
+            conn.Open();
+            SqlCommand sc = new SqlCommand("select * from user1 ", conn);
+            SqlDataReader reader;
+
+            reader = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("maquyen", typeof(string));
+            dt.Load(reader);
+
+            comboBox1.ValueMember = "maquyen";
+            comboBox1.DisplayMember = "maquyen";
+            comboBox1.DataSource = dt;
+
+            conn.Close();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frmqlLUONG frm = new frmqlLUONG();
-            frm.ShowDialog();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcoutacc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
     }
 }

@@ -31,10 +31,11 @@ namespace QuanLyTienLuong
                 daThongTinNhanVien.Fill(dtThongTinNhanVien);
 
 
+                //int i = dgvNHANSU.CurrentCell.RowIndex;
 
+                 dgvNHANSU.DataSource = dtThongTinNhanVien;
 
-                dgvNHANSU.DataSource = dtThongTinNhanVien;
-
+                
             }
             catch (SqlException)
             {
@@ -58,6 +59,12 @@ namespace QuanLyTienLuong
             // TODO: This line of code loads data into the 'quanLyTienLuongDataSet4.ThongTinNhanVien' table. You can move, or remove it, as needed.
             this.thongTinNhanVienTableAdapter.Fill(this.quanLyTienLuongDataSet4.ThongTinNhanVien);
             LoadData();
+
+            //comboBox1.Items.Add(Row)
+                
+	{
+		 
+	}
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -149,6 +156,39 @@ namespace QuanLyTienLuong
             //Panel panel1 = new Panel();
             CreateMyPanel();
             button1.Location = new System.Drawing.Point(56, 72 + i);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            int height = 0;
+            foreach (DataGridViewRow row in dgvNHANSU.Rows)
+            {
+                height += row.Height;
+            }
+            height += dgvNHANSU.ColumnHeadersHeight;
+
+
+            int width = 0;
+            foreach (DataGridViewColumn row in dgvNHANSU.Columns)
+            {
+                width += row.Width;
+            }
+            width += dgvNHANSU.ColumnHeadersHeight;
+
+            Bitmap bm = new Bitmap(this.dgvNHANSU.Width, this.dgvNHANSU.Height);
+            dgvNHANSU.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+            //e.Graphics.DrawImage(, 60, 60);
+            e.Graphics.DrawImage(bm, 60, 60);
         }
     }
 }

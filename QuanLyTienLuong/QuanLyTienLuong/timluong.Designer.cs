@@ -72,6 +72,8 @@
             this.luongNhanVienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.luongNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bBacLuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button6 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panelACC.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -224,6 +226,7 @@
             // 
             // gbQLL_XemTruoc
             // 
+            this.gbQLL_XemTruoc.Controls.Add(this.button6);
             this.gbQLL_XemTruoc.Controls.Add(this.btnThoat);
             this.gbQLL_XemTruoc.Controls.Add(this.button5);
             this.gbQLL_XemTruoc.Controls.Add(this.txtcoutacc);
@@ -272,6 +275,7 @@
             this.dataGridViewTextBoxColumn6});
             this.dgvluong.DataSource = this.luongNhanVienBindingSource2;
             this.dgvluong.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvluong.GridColor = System.Drawing.Color.White;
             this.dgvluong.Location = new System.Drawing.Point(3, 17);
             this.dgvluong.Name = "dgvluong";
             this.dgvluong.Size = new System.Drawing.Size(666, 408);
@@ -497,7 +501,7 @@
             // 
             this.button5.Image = global::QuanLyTienLuong.Properties.Resources.xoa;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(687, 205);
+            this.button5.Location = new System.Drawing.Point(687, 228);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(145, 51);
             this.button5.TabIndex = 4;
@@ -521,10 +525,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyTienLuong.Properties.Resources.qw;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -544,6 +548,22 @@
             // 
             this.bBacLuongBindingSource.DataMember = "bBacLuong";
             this.bBacLuongBindingSource.CurrentChanged += new System.EventHandler(this.bBacLuongBindingSource_CurrentChanged);
+            // 
+            // button6
+            // 
+            this.button6.Image = global::QuanLyTienLuong.Properties.Resources.in1;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(687, 145);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(145, 51);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "in";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmtimluong
             // 
@@ -632,6 +652,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button6;
+        private System.Drawing.Printing.PrintDocument printDocument1;
 
     }
 }

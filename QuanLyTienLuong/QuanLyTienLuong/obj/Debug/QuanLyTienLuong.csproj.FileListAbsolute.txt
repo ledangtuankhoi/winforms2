@@ -17,3 +17,5 @@ H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLy
 H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLyTienLuong.frm_TIM_NHANSU.resources
 H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLyTienLuong.frm_NHANSU_baocao.resources
 H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLyTienLuong.frm_MDI_nhansu.resources
+H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLyTienLuong.frm_taikhoan_luong.resources
+H:\TuanKhoi\Dai_Hoc\KT_winforms\QuanLyTienLuong\QuanLyTienLuong\obj\Debug\QuanLyTienLuong.frm_taikhoan_NHANSU.resources

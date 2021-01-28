@@ -14,6 +14,8 @@ namespace QuanLyTienLuong
 {
     public partial class frmtimluong : Form
     {
+        public string setmaquyen, getmaquyen;
+
         string strConnectionstring = @"Data Source=DESKTOP-5RKP31B;Initial Catalog=QuanLyTienLuong;Integrated Security=True";
         SqlConnection conn = null;
         SqlDataAdapter daLuongNhanVien = null;
@@ -21,6 +23,9 @@ namespace QuanLyTienLuong
         int a;
         void LoadData()
         {
+
+            
+
             try
             {
                 conn = new SqlConnection(strConnectionstring);
@@ -81,6 +86,7 @@ namespace QuanLyTienLuong
         {
             this.Close();
             frmqlLUONG frm = new frmqlLUONG();
+            
             frm.ShowDialog();
         }
 
@@ -109,8 +115,48 @@ namespace QuanLyTienLuong
 
         private void frmtimluong_Load(object sender, EventArgs e)
         {
+
+
+            //using (NormalizationForm db = new NormalizationForm())
+            //{
+            //    Custom
+            //}
+
+
             // TODO: This line of code loads data into the 'quanLyTienLuongDataSet2.LuongNhanVien' table. You can move, or remove it, as needed.
             this.luongNhanVienTableAdapter.Fill(this.quanLyTienLuongDataSet2.LuongNhanVien);
+            getmaquyen = setmaquyen;
+
+            if (getmaquyen == "1")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\people1.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = false;
+                //btntaikhoab.Enabled = false;
+
+
+
+            }
+            if (getmaquyen == "2")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\Untitled-1.png");
+
+                //btnLuong.Enabled = false;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = false;
+
+
+            }
+            if (getmaquyen == "0")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\admin-settings-male.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = true;
+
+            }
             LoadData();
             txtsreach.Focus();
             rdbMaLuong.Checked = false;
@@ -327,6 +373,48 @@ namespace QuanLyTienLuong
 
         private void label8_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+            
+            //dgvluong dgv = new dgvluong
+
+            //int r = dgvluong.CurrentCell.RowIndex;
+            //this.txtmaluong.Text = dgvluong.Rows[r].Cells[0].Value.ToString();
+            //this.txtmanhanvien.Text = dgvluong.Rows[r].Cells[1].Value.ToString();
+            //this.txtmakhautru.Text = dgvluong.Rows[r].Cells[2].Value.ToString();
+            //this.txtmangaycong.Text = dgvluong.Rows[r].Cells[3].Value.ToString();
+            //this.txtmathuong.Text = dgvluong.Rows[r].Cells[4].Value.ToString();
+            //this.txtMaPhuCap.Text = dgvluong.Rows[r].Cells[5].Value.ToString();
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            int height = 0;
+            foreach (DataGridViewRow row in dgvluong.Rows)
+            {
+                height += row.Height;
+            }
+            height += dgvluong.ColumnHeadersHeight;
+
+
+            int width = 0;
+            foreach (DataGridViewColumn row in dgvluong.Columns)
+            {
+                width += row.Width;
+            }
+            width += dgvluong.ColumnHeadersHeight;
+
+            Bitmap bm = new Bitmap(this.dgvluong.Width, this.dgvluong.Height);
+            dgvluong.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+            //e.Graphics.DrawImage(, 60, 60);
+            e.Graphics.DrawImage(bm, 60, 60);
+
 
         }
     }

@@ -27,6 +27,11 @@ namespace QuanLyTienLuong
         SqlDataAdapter daLuongNhanVien = null;
         DataTable dtLuongNhanVien = null;
         bool Them;
+
+        public string setmaquyen, getmaquyen;
+
+
+
         void LoadData()
         {
             try
@@ -120,6 +125,43 @@ namespace QuanLyTienLuong
             // TODO: This line of code loads data into the 'quanLyTienLuongDataSet.LuongNhanVien' table. You can move, or remove it, as needed.
            // this.luongNhanVienTableAdapter.Fill(this.quanLyTienLuongDataSet.LuongNhanVien);
             LoadData();
+
+
+            getmaquyen = setmaquyen;
+
+            if (getmaquyen == "1")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\people1.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = false;
+                //btntaikhoab.Enabled = false;
+
+
+
+            }
+            if (getmaquyen == "2")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\Untitled-1.png");
+
+                //btnLuong.Enabled = false;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = false;
+
+
+            }
+            if (getmaquyen == "0")
+            {
+                pictureBox1.Image = Image.FromFile(@"H:\TuanKhoi\Dai_Hoc\KT_winforms\img\forms\admin-settings-male.png");
+
+                //btnLuong.Enabled = true;
+                //btnNhanSu.Enabled = true;
+                //btntaikhoab.Enabled = true;
+
+            }
+
+
+
             this.btnluu.Enabled = false;
             this.btnhuybo.Enabled = false;
             hideSubMenu();
